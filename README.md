@@ -19,9 +19,9 @@ Add support for Big Integers (numbers greater than 18446744073709551615) in C al
 
     Gangnam Style breached the barrier, showing more than 2.1 billion views & we got some arbitrary result. 
 
-    ![Image](assets/Gangnam.NegCount.png)
-    
+    <div style="text-align:center"><img src="assets/Gangnam.NegCount.png" /></div>
+
     To solve this, YouTube upgraded to 64-bit integer for its video counter, which means videos have a maximum viewer count of 9,223,372,036,854,776,000. (~ 9.22 quintillion). </br>
     &emsp; &emsp; &emsp; &emsp; &emsp; 2^(63) - 1 = 9223372036854776000
 
-    ![Image](assets/psy.png) 
+    <div style="text-align:center"><img src="assets/psy.png" /></div>
