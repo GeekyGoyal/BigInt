@@ -13,11 +13,11 @@ Add support for Big Integers (numbers greater than 18446744073709551615) in C al
 
 ## Motivation Behind this Project
 - GANGNAM STYLE
-YouTube developers built their platform with a counter using a 32-bit integer.
-         2^(31) - 1 = 2147483647
-This means the maximum possible views could 2,147,483,647. (~ 2.1 billion).
+    YouTube developers built their platform with a counter using a 32-bit integer.
+            2^(31) - 1 = 2147483647
+    This means the maximum possible views could 2,147,483,647. (~ 2.1 billion).
 
-Gangnam Style breached the barrier, showing more than 2.1 billion views & we got some arbitrary result.
+    Gangnam Style breached the barrier, showing more than 2.1 billion views & we got some arbitrary result.
 
-To solve this, YouTube upgraded to 64-bit integer for its video counter, which means videos have a maximum viewer count of 9,223,372,036,854,776,000. (~ 9.22 quintillion).
-         2^(63) - 1 = 9223372036854776000
+    To solve this, YouTube upgraded to 64-bit integer for its video counter, which means videos have a maximum viewer count of 9,223,372,036,854,776,000. (~ 9.22 quintillion).
+            2^(63) - 1 = 9223372036854776000
