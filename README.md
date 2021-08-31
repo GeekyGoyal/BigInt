@@ -17,7 +17,7 @@ Add support for Big Integers (numbers greater than 18446744073709551615) in C al
 
 ## Motivation Behind this Project
 - GANGNAM STYLE: </br>
-    YouTube developers built their platform with a counter using a 32-bit integer. </br>
+    YouTube developers built their platform with a counter using a signed 32-bit integer. </br>
     &emsp; &emsp; &emsp; &emsp; &emsp; 2^(31) - 1 = 2147483647 </br>
     This means the maximum possible views could 2,147,483,647. (~ 2.1 billion). </br>
 
