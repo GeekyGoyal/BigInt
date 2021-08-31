@@ -18,6 +18,7 @@ Add support for Big Integers (numbers greater than 18446744073709551615) in C al
     This means the maximum possible views could 2,147,483,647. (~ 2.1 billion).
 
     Gangnam Style breached the barrier, showing more than 2.1 billion views & we got some arbitrary result.
+    ![Image](https://www.google.co.in/url?sa=i&url=https%3A%2F%2Fwww.exploringbinary.com%2Fgangnam-style-video-overflows-youtube-counter%2F&psig=AOvVaw1IDUOa8A_T5MlreRFhxtwd&ust=1630501786610000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIC2u9Gq2_ICFQAAAAAdAAAAABAK)
 
     To solve this, YouTube upgraded to 64-bit integer for its video counter, which means videos have a maximum viewer count of 9,223,372,036,854,776,000. (~ 9.22 quintillion).
             2^(63) - 1 = 9223372036854776000
