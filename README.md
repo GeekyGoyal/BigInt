@@ -28,4 +28,9 @@ Add support for Big Integers (numbers greater than 18446744073709551615) in C al
     To solve this, YouTube upgraded to 64-bit integer for its video counter, which means videos have a maximum viewer count of 9,223,372,036,854,776,000. (~ 9.22 quintillion). </br>
     &emsp; &emsp; &emsp; &emsp; &emsp; 2^(63) - 1 = 9223372036854776000
 
-    ![Image](assets/psy.png) 
+    ![Image](assets/psy.png)
+    
+- UNIX EPOCH TIME: <br>
+    Unix systems record time values as the number of seconds since 00:00:00 UTC on January 1, 1970. 32-bit systems use a signed 32-bit integer for this, so they will wrap around 2,147,483,647 seconds after that date. Two billion seconds is about 68 years; on January 19, 2038, at 03:14:07 in the morning, 32-bit Unix clocks will roll over.
+
+    ![Image](assets/1520134296131.jpg)
