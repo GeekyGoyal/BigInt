@@ -31,7 +31,11 @@ Add support for Big Integers (numbers greater than 18446744073709551615) in C al
     ![Image](assets/psy.png)
     
 - UNIX EPOCH TIME: <br>
-    Unix systems record time values as the number of seconds since 00:00:00 UTC on January 1, 1970. 32-bit systems use a signed 32-bit integer for this, so they will wrap around 2,147,483,647 seconds after that date. Two billion seconds is about 68 years; on January 19, 2038, at 03:14:07 in the morning, 32-bit Unix clocks will roll over. One second past that is a time counter overflow, which results in the time flying 137 years into the past, because the time counter becomes -2,147,483,648. </br> 
+    Unix systems record time values as the number of seconds since 00:00:00 UTC on January 1, 1970. 32-bit systems use a signed 32-bit integer for this, so they will wrap around 2,147,483,647 seconds after that date. Two billion seconds is about 68 years; on January 19, 2038, at 03:14:07 in the morning, 32-bit Unix clocks will roll over. One second past that is a time counter overflow, which results in the time flying 137 years into the past, because the time counter becomes -2,147,483,648. Unix machines are eventually going to run out of the bits to tick off seconds. So, on that day, the C programs that use the standard time library will start to have problems with dates.</br> 
     This Year 2038 Problem is also called Unix Millenium Bug or Y2K38 bug.
 
     ![Image](assets/1520134296131.jpg)
+
+    Here’s an animation showing how the Year 2038 bug would reset the date:
+
+    ![Image](assets/Year_2038_problem.gif)
