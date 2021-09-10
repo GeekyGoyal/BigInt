@@ -51,9 +51,9 @@ static int isZero(const char* BigInt){
 	return 0;
 }
 
-static char* BigInt_Subtraction(const char* BigInt1, const char* BigInt2){
-	int len1 = strlen(BigInt1)-1;
-	int len2 = strlen(BigInt2)-1;
+static char* BigInt_Subtraction(const char* BigInt1, const char* BigInt2) {
+	int len1 = strlen(BigInt1) - 1;
+	int len2 = strlen(BigInt2) - 1;
 	int top = 0, bottom = 0, k = len1, i;
 	int taken = 0;
 	char* res = (char*)calloc(k+2, sizeof(char));
@@ -102,9 +102,9 @@ static char* BigInt_Subtraction(const char* BigInt1, const char* BigInt2){
 	return res;
 }
 
-char* BigInt_Sub(const char* BigInt1, const char* BigInt2){
+char* BigInt_Sub(const char* BigInt1, const char* BigInt2) {
 	int bigger = compareBigInt(BigInt1, BigInt2);
-	if(bigger == -1){
+	if(bigger == -1) {
 		char* res = BigInt_Sub(BigInt2, BigInt1);
 		return removeLeadingZeros(res);
 	}
