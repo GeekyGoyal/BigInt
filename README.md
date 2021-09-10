@@ -5,11 +5,14 @@ The maximum limit of Unsigned Long Int in C/C++ is 18446744073709551615, a 20 di
 Add support for Big Integers (numbers greater than 18446744073709551615) in C along with basic mathematical operations and functions.
 
 ## Applications
+While practicing Competitive Programming or in most of the programming contests, you might have noticed that you are required to print the result in 10^9+7 modulo. </br>
+Ever wondered WHY? :thinking: </br>
+Because of **Integer Overflows.**  The largest integer datatype in C/C++ is _long long int_ and it can store integers from 2^(-63) to 2^(63). (~ 10^18). But, we might come across some cases where this range of _unsigned long long int_ will be insufficient to handle such big numbers. 
 - Calculate factorial of very large integers.
 - Calculate very large nth Fibonacci number.
 - Calculate binomial coefficient of very large numbers.
-- Perform binary exponentiation on very large numbers or raise numbers to very large powers.
 - Greatest Common Divisor.
+- Perform binary exponentiation on very large numbers or raise numbers to very large powers.
 
 ## Requirements
 - You may assume all BigInts are at most 1000 digits long, hence using malloc function, declare a 1001 element character array. The 1 extra element will be for the null character '\0'.
