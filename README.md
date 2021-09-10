@@ -13,7 +13,7 @@ Add support for Big Integers (numbers greater than 18446744073709551615) in C al
 
 ## Requirements
 - You may assume all BigInts are at most 1000 digits long, hence using malloc function, declare a 1001 element character array. The 1 extra element will be for the null character '\0'.
-- To avoid computing with garbage values, initialize all elements of the declared INTAL to 0.
+- To avoid computing with garbage values, initialize all elements of the declared BigInt to 0.
 
 ## Motivation Behind this Project
 - GANGNAM STYLE: </br>
