@@ -22,14 +22,15 @@ Because of **Integer Overflows.**  The largest integer datatype in C/C++ is _lon
 Criteria on which the value of M depends: </br>
 1. It should be large enough to fit in an int data type. (~10^9) </br>
 2. It should be a prime number. </br>
+
 10^9+7 fulfills both the criteria. </br>
 **NOTE:** In programming, due to the size of variable limitations, we perform modulo M at each intermediate stage so that range overflow never occurs. </br>
 There are few Distributive properties of Modulo, which you can learn while doing **Modular Arithematic** </br>
 
-Attaching the links of few problems available online to practice arithematic operations on big integers: </br>
-[Add large numbers from Codechef](https://www.codechef.com/UAPRAC/problems/ADDXL/) </br>
-[Julka from SPOJ](https://www.spoj.com/problems/JULKA/) </br>
-[Factorails from SPOJ](https://www.spoj.com/problems/FCTRL2/)
+Attaching the links of a few problems available online to practice arithematic operations on big integers: </br>
+-[Add large numbers from Codechef](https://www.codechef.com/UAPRAC/problems/ADDXL/) </br>
+-[Julka from SPOJ](https://www.spoj.com/problems/JULKA/) </br>
+-[Factorails from SPOJ](https://www.spoj.com/problems/FCTRL2/)
 
 ## Motivation Behind this Project
 - GANGNAM STYLE: </br>
