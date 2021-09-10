@@ -30,7 +30,7 @@ There are few Distributive properties of Modulo, which you can learn while doing
 Attaching the links of a few problems available online to practice arithematic operations on big integers: </br>
 - [Add large numbers from Codechef](https://www.codechef.com/UAPRAC/problems/ADDXL/) ([Solution](https://github.com/GeekyGoyal/Coding-Practice/blob/main/Codechef/AddLargeNumbers.cpp))</br>
 - [Julka from SPOJ](https://www.spoj.com/problems/JULKA/) ([Solution](https://github.com/GeekyGoyal/Coding-Practice/blob/main/SPOJ/Julka.cpp))</br>
-- [Factorails from SPOJ](https://www.spoj.com/problems/FCTRL2/) ([Solution](https://github.com/GeekyGoyal/Coding-Practice/blob/main/SPOJ/smallFactorials.cpp))
+- [Factorials from SPOJ](https://www.spoj.com/problems/FCTRL2/) ([Solution](https://github.com/GeekyGoyal/Coding-Practice/blob/main/SPOJ/smallFactorials.cpp))
 
 ## Motivation Behind this Project
 - GANGNAM STYLE: </br>
