@@ -5,9 +5,6 @@ The maximum limit of Unsigned Long Int in C/C++ is 18446744073709551615, a 20 di
 Add support for Big Integers (numbers greater than 18446744073709551615) in C along with basic mathematical operations and functions.
 
 ## Applications
-While practicing Competitive Programming or in most of the programming contests, you might have noticed that you are required to print the result in 10^9+7 modulo. </br>
-Ever wondered WHY? :thinking: </br>
-Because of **Integer Overflows.**  The largest integer datatype in C/C++ is _long long int_ and it can store integers from 2^(-63) to 2^(63). (~ 10^18). But, we might come across some cases where this range of _unsigned long long int_ will be insufficient to handle such big numbers. 
 - Calculate factorial of very large integers.
 - Calculate very large nth Fibonacci number.
 - Calculate binomial coefficient of very large numbers.
@@ -17,6 +14,22 @@ Because of **Integer Overflows.**  The largest integer datatype in C/C++ is _lon
 ## Requirements
 - You may assume all BigInts are at most 1000 digits long, hence using malloc function, declare a 1001 element character array. The 1 extra element will be for the null character '\0'.
 - To avoid computing with garbage values, initialize all elements of the declared BigInt to 0.
+
+## Why we need BigInt?
+While practicing Competitive Programming or in most of the programming contests, you might have noticed that you are required to print the result in 10^9+7 modulo. </br>
+:thinking: Ever wondered WHY?  </br>
+Because of **Integer Overflows.**  The largest integer datatype in C/C++ is _long long int_ and it can store integers from 2^(-63) to 2^(63). (that is ~ 10^18). But, you might come across some cases where this range of _unsigned long long int_ will be insufficient to handle such big numbers. So, instead of printing the exact value, we are required to print the answer modulo some number M. <br>
+Criteria on which the value of M depends: </br>
+1. It should be large enough to fit in an int data type. (~10^9) </br>
+2. It should be a prime number. </br>
+10^9+7 fulfills both the criteria. </br>
+**NOTE:** In programming, due to the size of variable limitations, we perform modulo M at each intermediate stage so that range overflow never occurs. </br>
+There are few Distributive properties of Modulo, which you can learn while doing **Modular Arithematic** </br>
+
+Attaching the links of few problems available online to practice arithematic operations on big integers: </br>
+[Add large numbers from Codechef](https://www.codechef.com/UAPRAC/problems/ADDXL/) </br>
+[Julka from SPOJ](https://www.spoj.com/problems/JULKA/) </br>
+[Factorails from SPOJ](https://www.spoj.com/problems/FCTRL2/)
 
 ## Motivation Behind this Project
 - GANGNAM STYLE: </br>
