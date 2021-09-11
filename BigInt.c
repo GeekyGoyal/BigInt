@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "BigInt.h"
 
 char* initializeBigInt() {
     char* arr = (char*)malloc(1001*sizeof(char));
@@ -141,8 +142,8 @@ static void BigInt_Addition(const char* BigInt1, const char* BigInt2, char* res)
     int len1 = strlen(BigInt1) - 1;
     int len2 = strlen(BigInt2) - 1;
     int sum = 0, carry = 0, k = len1 + 1;
-    for(int i = 0; i < len1 + 1; i++) {
-        res[i] = 0;
+    for(int i = 0; i <= k; i++) {
+        res[i] = '0';
     }
     while(len2 >= 0) {
         sum = BigInt1[len1] + BigInt2[len2] + carry - 96;
@@ -152,7 +153,7 @@ static void BigInt_Addition(const char* BigInt1, const char* BigInt2, char* res)
         --len2;
         --k;
     }
-    while(len1 > 0) {
+    while(len1 >= 0) {
         sum = BigInt1[len1] + carry - 48;
         res[k] = 48 + sum % 10;
         carry = sum / 10;
@@ -168,7 +169,7 @@ char* BigInt_Add(const char* BigInt1, const char* BigInt2) {
     int bigger = compareBigInt(BigInt1, BigInt2);
     if(bigger == -1) {
         char* res = (char*)calloc(strlen(BigInt2) + 2, sizeof(char));
-        BigInt_Addition(BigInt1, BigInt2, res);
+        BigInt_Addition(BigInt2, BigInt1, res);
         return removeLeadingZeros(res);
     }
     else { 
@@ -276,12 +277,12 @@ char* BigInt_Pow(const char* BigInt1, unsigned int n) {
 	char* temp;
 	while(n > 0) {
 		if(n & 1) {
-			temp = BigInt_multiply(res, x);
+			temp = BigInt_Multiply(res, x);
 			free(res);
 			res = temp;		
 		}	
 		n = n >> 1;
-		temp = BigInt_multiply(x,x);
+		temp = BigInt_Multiply(x,x);
 		free(x);
 		x = temp;
 	}
@@ -290,7 +291,7 @@ char* BigInt_Pow(const char* BigInt1, unsigned int n) {
 }
 
 char* BigInt_Mod(const char* BigInt1, const char* BigInt2) {
-	int comp = BigInt_compare(BigInt1,BigInt2);
+	int comp = compareBigInt(BigInt1,BigInt2);
 	int l1 = strlen(BigInt1);
 	int l2 = strlen(BigInt2);
 	int i;	
@@ -309,9 +310,9 @@ char* BigInt_Mod(const char* BigInt1, const char* BigInt2) {
 		--diff;
 	}
 	if(diff == 0) {
-		char* temp = BigInt_diff(BigInt1,BigInt2);
+		char* temp = BigInt_Sub(BigInt1,BigInt2);
 		char* t2 = temp;
-		char* res = BigInt_mod(temp, BigInt2);
+		char* res = BigInt_Mod(temp, BigInt2);
 		free(t2);
 		return res;
 	}
@@ -325,42 +326,42 @@ char* BigInt_Mod(const char* BigInt1, const char* BigInt2) {
 		ni2[l2+i] = 48;
 	}
 	ni2[l2+i] = '\0';
-	while(BigInt_compare(ni1,ni2) > 0) {
-		char* temp = BigInt_diff(ni1,ni2);
+	while(compareBigInt(ni1,ni2) > 0) {
+		char* temp = BigInt_Sub(ni1,ni2);
 		char* t2 = ni1;
 		ni1 = temp;
 		free(t2);
 	}
 	free(ni2);
-	if(BigInt_compare(ni1,BigInt2) <= 0) { 
+	if(compareBigInt(ni1,BigInt2) <= 0) { 
 		return ni1;
 	}
 	char* temp = ni1;
-	char* res = BigInt_mod(ni1, BigInt2);
+	char* res = BigInt_Mod(ni1, BigInt2);
 	free(temp);
 	return res;
 }
 
 char* BigInt_GCD(const char* BigInt1, const char* BigInt2) {
-	if(strcmp(BigInt1,"0")==0 && strcmp(BigInt2,"0")==0) {
+	if(strcmp(BigInt1,"0") == 0 && strcmp(BigInt2,"0") == 0) {
 		char* res = (char*)calloc(2,sizeof(char));
 		res[0] = '0';
 		res[1] = '\0';	
 		return res;
 	}
-	if(strcmp(BigInt1,"0")==0) {
-		char* res = (char*)calloc(strlen(BigInt2)+1,sizeof(char));
+	if(strcmp(BigInt1,"0") == 0) {
+		char* res = (char*)calloc(strlen(BigInt2) + 1, sizeof(char));
 		int i = 0;		
-		for(i = 0; i < strlen(BigInt2);i++) { 
+		for(i = 0; i < strlen(BigInt2); i++) { 
 			res[i] = BigInt2[i];
 		}
 		res[i] = '\0';	
 		return res;
 	}
 	if(strcmp(BigInt2,"0") == 0) {
-		char* res = (char*)calloc(strlen(BigInt1)+1,sizeof(char));
+		char* res = (char*)calloc(strlen(BigInt1) + 1,sizeof(char));
 		int i = 0;		
-		for(i = 0; i < strlen(BigInt1);i++) { 
+		for(i = 0; i < strlen(BigInt1); i++) { 
 			res[i] = BigInt1[i];
 		}
 		res[i] = '\0';	
