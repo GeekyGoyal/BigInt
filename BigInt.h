@@ -1,5 +1,5 @@
-/* a function that accepts two BigIntegers as function parameters and returns 0 if both BigIntegers 
-* are equal, -1 if BigInt1 is lesser than BigInt2 and 1 if BigInt2 is lesser than BigInt1. */
+/* a function that accepts two BigIntegers as function parameters and returns 0 if both BigIntegers are equal,
+* -1 if BigInt1 is lesser than BigInt2 and 1 if BigInt2 is lesser than BigInt1. */
 int compareBigInt(const char* BigInt1, const char* BigInt2);
 
 /* a function which adds two BigIntegers and returns their sum. */
