@@ -1,3 +1,4 @@
+/* To verify or to generate your own testcases, you can use https://www.omnicalculator.com/ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
