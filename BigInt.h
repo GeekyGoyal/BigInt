@@ -5,7 +5,7 @@ int compareBigInt(const char* BigInt1, const char* BigInt2);
 /* a function which adds two BigIntegers and returns their sum. */
 char* BigInt_Add(const char* BigInt1, const char* BigInt2);
 
-/* a function that accepts two BigIntegers as function parameters and returns the difference. */
+/* a function that accepts two BigIntegers as function parameters and returns their difference. */
 char* BigInt_Sub(const char* BigInt1, const char* BigInt2);
 
 /* a function which multiplies two BigIntegers and returns their product. */
